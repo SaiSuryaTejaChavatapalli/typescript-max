@@ -1,12 +1,13 @@
 import CourseGoal from "./CourseGoal";
+import InfoBox from "./InfoBox";
 import { type ReactNode } from "react";
 import { type CourseGoal as CGoal } from "../App";
-import InfoBox from "./Infobox";
 
 type CourseGoalListProps = {
   goals: CGoal[];
   onDeleteGoal: (id: number) => void;
 };
+
 export default function CourseGoalList({
   goals,
   onDeleteGoal,
@@ -24,7 +25,6 @@ export default function CourseGoalList({
       </InfoBox>
     );
   }
-
   return (
     <>
       {warningBox}
